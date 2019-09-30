@@ -1,14 +1,17 @@
 import React from "react";
+import {Card, Title, Desc, Date,Image,Copyright} from "../styles/CardStyles";
+
+
 
 const NasaCard = props => {
     return (
-        <div>
-            <h1 className="title">{props.title}</h1>
-            <p>{props.date}</p>
-            <p>{props.explanation}</p>
-            <img className="img" alt={props.title} src={props.imgUrl} />
-            <p>Copyright: {props.copyright}</p>
-        </div>
+        <Card>
+            <Title>{props.title}</Title>
+            <Date>Today is {props.date}</Date>
+            <Desc>{props.explanation}</Desc>
+            <Image alt={props.title} src={props.imgUrl}></Image>
+            <Copyright>Copyright: {props.copyright}</Copyright>
+        </Card>
     );
 };
 
